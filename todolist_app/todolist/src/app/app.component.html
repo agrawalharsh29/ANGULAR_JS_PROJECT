@@ -1,0 +1,25 @@
+<h1>
+  {{title}}
+</h1>
+<input type="text" placeholder="Enter Task" #newTodo /><br><br>
+<input type="text" #priority placeholder="Enter priority" /><br><br>
+<input type="text" placeholder="Enter status" #done /><br><br>
+ <button (click)="addTodo(newTodo.value,priority.value,done.value);newTodo.value='';priority.value='';done.value='';">ADD</button><br>
+
+<table>
+  <tr>
+  <th>LABEL</th>
+  <th>PRIORITY</th>
+  <th>STATUS</th>
+  <th>ACTION</th>
+</tr>
+<tr *ngFor="let todo of todos">
+  <td>{{todo.label}}</td>
+  <td>{{todo.priority}}</td>
+  <td>{{todo.done}}</td>
+  <td><button (click)="deleteTodo(todo)" >DELETE</button></td>
+
+
+</tr>
+
+</table>
