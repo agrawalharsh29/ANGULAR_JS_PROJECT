@@ -1,0 +1,11 @@
+<div id="ab">
+<h1> MY CALCULATOR </h1>
+<input type ="number" placeholder="Enter First Number" [(ngModel)]="first"><br><br>
+<input type ="number" placeholder="Enter Second Number" [(ngModel)]="second"><br><br>
+<input type = "radio" name = "calc" value="add" (click)="addition()">ADD
+<input type = "radio" name = "calc" value="sub" (click)="subtraction()">SUB
+<input type = "radio" name = "calc" value="div" (click)="multiplication()">MUL
+<input type = "radio" name = "calc" value="div" (click)="division()">DIV
+<br>
+<h1>{{st}}</h1>
+</div>
