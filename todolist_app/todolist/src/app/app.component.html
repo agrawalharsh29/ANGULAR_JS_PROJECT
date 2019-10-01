@@ -1,11 +1,16 @@
+<mat-toolbar color="primary">
 <h1>
-  {{title}}
-</h1>
+    {{title}}
+ </h1>
+</mat-toolbar><br>
+<div id="box">
+  <h1 style="margin-left: 20px;">TASKS TO BE DONE</h1>
+  <div id="det">
 <input type="text" placeholder="Enter Task" #newTodo /><br><br>
 <input type="text" #priority placeholder="Enter priority" /><br><br>
 <input type="text" placeholder="Enter status" #done /><br><br>
- <button (click)="addTodo(newTodo.value,priority.value,done.value);newTodo.value='';priority.value='';done.value='';">ADD</button><br>
-
+ <button mat-raised-button color="primary"style="margin-left: 40px; padding-left:40px;padding-right:40px;"(click)="addTodo(newTodo.value,priority.value,done.value);newTodo.value='';priority.value='';done.value='';">ADD</button><br>
+  </div>
 <table>
   <tr>
   <th>LABEL</th>
@@ -17,9 +22,13 @@
   <td>{{todo.label}}</td>
   <td>{{todo.priority}}</td>
   <td>{{todo.done}}</td>
-  <td><button (click)="deleteTodo(todo)" >DELETE</button></td>
+  <td><button mat-raised-button color="primary"(click)="deleteTodo(todo)" >DELETE</button></td>
 
 
 </tr>
 
 </table>
+</div>
+<mat-toolbar color="primary"style="margin-top:220px;position:relative;">
+<h3 style = "margin-left:1100px;">MADE BY HARSH AGRAWAL CSE DEPARTMENT</h3>
+</mat-toolbar>
