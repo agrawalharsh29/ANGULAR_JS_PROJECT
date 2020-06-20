@@ -1,0 +1,22 @@
+<!-- <b><label for="nameField" style="font-family: Ubuntu;">Your Message</label></b> -->
+ 
+<input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
+ 
+<button (click)="sendMessage()">Send</button>
+
+
+<ng-container *ngFor="let message of messages | async">
+ 
+<div class="message"[ngClass]="{ 'from': message.sentBy === 'bot',
+ 
+'to': message.sentBy === 'user' }">
+<div class="ab">
+ 
+<b>{{ message.content }}</b>
+</div>
+</div>
+ 
+
+ 
+</ng-container>
+
